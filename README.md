@@ -1,4 +1,4 @@
-# solução utilizando a arquitetura Restful com as seguintes ferramentas:
+# Solução utilizando a arquitetura Restful com as seguintes ferramentas:
 
 1. Angular ou AngularJS;
 2. Spring Boot
