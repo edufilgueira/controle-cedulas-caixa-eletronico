@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3> Cadastro de Cedulas</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+
+		<form>
+		  <div class="form-row">
+		    <div class="col-7">
+		      <label for="exampleInputEmail1">Descricao</label>
+		      <input type="text" ng-model="cedula.nome" class="form-control" placeholder="Descrição">
+		    </div>
+		    <div class="col">
+		      <label for="exampleInputEmail1">Valor</label>
+		      <input type="text" ng-model="cedula.valor" class="form-control" placeholder="Valor da cedula">
+		    </div>
+		  </div>
+		  &nbsp;
+		  <div class="form-group">
+		    <button type="submit" class="btn btn-primary" ng-click="salvar()">Salvar</button>
+			<button type="submit" class="btn btn-primary" ng-click="cancelar()">Cancelar</button>
+		  </div> 
+		</form>
+		
+		<table class="table">
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Valor</th>
+				<th></th>
+			</tr>
+			<tr ng-repeat="cedula in cedulas">
+				<td>{{ cedula.id }}</td>
+				<td>{{ cedula.nome }}</td>
+				<td>{{ cedula.valor}}</td>
+				<td>
+				  <button type="button" class="btn btn-danger" ng-click="excluir(cedula)">Deletar</button>
+				  <button type="button" class="btn btn-success" ng-click="alterar(cedula)">Alterar</button>
+				</td>
+			</tr>
+
+		</table>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
